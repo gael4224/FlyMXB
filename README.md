@@ -1,4 +1,4 @@
-# FlyMXNB - Plataforma de Pagos de Vuelos con MXNB
+# FlyMXB - Plataforma de Pagos de Vuelos con MXNB
 
 Una aplicación web completa para pagar vuelos de avión utilizando MXNB (Peso Mexicano Digital) sobre la red Arbitrum. La plataforma incluye autenticación con MetaMask, generación de wallets por email, promociones exclusivas, y gestión completa de boletos.
 
