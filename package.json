@@ -1,0 +1,47 @@
+{
+  "name": "flymxnb",
+  "version": "1.0.0",
+  "description": "Aplicación web para pagar vuelos con MXNB sobre Arbitrum",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "dev-setup": "node scripts/dev-setup.js",
+    "check": "node scripts/check-setup.js",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network arbitrum",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network arbitrum-sepolia",
+    "admin": "hardhat run scripts/admin.js --network arbitrum",
+    "admin:testnet": "hardhat run scripts/admin.js --network arbitrum-sepolia",
+    "admin:flights": "hardhat run scripts/admin.js --network arbitrum 1",
+    "admin:create-flight": "hardhat run scripts/admin.js --network arbitrum 2",
+    "admin:promotions": "hardhat run scripts/admin.js --network arbitrum 3",
+    "admin:create-promotion": "hardhat run scripts/admin.js --network arbitrum 4",
+    "admin:balance": "hardhat run scripts/admin.js --network arbitrum 5",
+    "admin:withdraw": "hardhat run scripts/admin.js --network arbitrum 6",
+    "admin:stats": "hardhat run scripts/admin.js --network arbitrum 7",
+    "verify": "hardhat verify --network arbitrum",
+    "verify:testnet": "hardhat verify --network arbitrum-sepolia",
+    "clean": "rm -rf cache artifacts dist node_modules",
+    "reset": "npm run clean && npm install && npm run compile",
+    "start": "python3 -m http.server 3000 || python -m http.server 3000 || npx serve . -p 3000"
+  },
+  "keywords": [
+    "blockchain",
+    "arbitrum",
+    "mxnb",
+    "flights",
+    "web3"
+  ],
+  "author": "FlyMXNB Team",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.8.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.3.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.25.0"
+  }
+}
